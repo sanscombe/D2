@@ -1,0 +1,319 @@
+\documentclass[11pt, a4paper]{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage[margin=2cm]{geometry}
+\usepackage[]{setspace}\onehalfspacing
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor= blue,
+    citecolor=blue
+}
+\usepackage{fixmath}
+\usepackage[inline]{showlabels}
+\usepackage{comment,stmaryrd}
+\usepackage{aliascnt}
+% 
+\usepackage{enumitem}
+\newenvironment{enumeratenice}
+{
+    \begin{enumerate}%
+    [label={\bf\arabic*}., itemsep=1ex,leftmargin=1.5cm]%2
+}
+{
+  \end{enumerate}
+}
+%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% \usepackage{libertine}
+% 
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\usepackage[normalem]{ulem}
+
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{tikzpagenodes}
+
+\mdfsetup{skipabove=10pt,skipbelow=10pt}
+\mdfdefinestyle{axioms}{%
+    % nobreak=true,
+    linecolor=pink,
+    outerlinewidth=1pt,
+    roundcorner=10pt,
+    innertopmargin=0pt,
+    innerbottommargin=10pt,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=gray!10!white
+}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}%[section]
+
+%%Simulated counters
+\newaliascnt{proposition}{theorem}
+\newaliascnt{lemma}{theorem}
+\newaliascnt{corollary}{theorem}
+%\newaliascnt{claim}{theorem}
+\newaliascnt{fact}{theorem}
+\newaliascnt{observation}{theorem}
+\newaliascnt{conjecture}{theorem}
+\newaliascnt{definition}{theorem}
+\newaliascnt{example}{theorem}
+\newaliascnt{question}{theorem}
+\newaliascnt{remark}{theorem}
+\newaliascnt{property}{theorem}
+\newaliascnt{construction}{theorem}
+\newaliascnt{setting}{theorem}
+\newaliascnt{axioms}{theorem}
+
+%% Secondary theorem environments
+\theoremstyle{plain}
+% \newmdtheoremenv[style=axioms]{axioms}[theorem]{Axioms}
+\newtheorem{axioms}[axioms]{Axioms}
+\newtheorem{proposition}[proposition]{Proposition}
+\newtheorem{lemma}[lemma]{Lemma}
+\newtheorem{corollary}[corollary]{Corollary}
+\newtheorem{claim}{Claim}[theorem]
+\newtheorem{fact}[fact]{Fact}
+\newtheorem{observation}[observation]{Observation}
+\newtheorem{conjecture}[conjecture]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[definition]{Definition}
+\newtheorem{example}[example]{Example}
+\newtheorem{question}[question]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[remark]{Remark}
+\newtheorem{property}[property]{Property}
+\newtheorem{construction}[construction]{Construction}
+\newtheorem{setting}[setting]{Setting}
+
+%%Reset the simulated counters
+\aliascntresetthe{proposition}
+\aliascntresetthe{lemma}
+\aliascntresetthe{corollary}
+%\aliascntresetthe{claim}
+\aliascntresetthe{fact}
+\aliascntresetthe{observation}
+\aliascntresetthe{conjecture}
+\aliascntresetthe{definition}
+\aliascntresetthe{example}
+\aliascntresetthe{question}
+\aliascntresetthe{remark}
+\aliascntresetthe{property}
+\aliascntresetthe{construction}
+\aliascntresetthe{setting}
+\aliascntresetthe{axioms}
+
+%%Custom labels%%
+\providecommand{\propositionautorefname}{Proposition}
+\providecommand{\lemmaautorefname}{Lemma}
+\providecommand{\corollaryautorefname}{Corollary}
+\providecommand{\claimautorefname}{Claim}
+\providecommand{\factautorefname}{Fact}
+\providecommand{\observationautorefname}{Observation}
+\providecommand{\conjectureautorefname}{Conjecture}
+\providecommand{\definitionautorefname}{Definition}
+\providecommand{\exampleautorefname}{Example}
+\providecommand{\questionautorefname}{Question}
+\providecommand{\remarkautorefname}{Remark}
+\providecommand{\propertyautorefname}{Property}
+\providecommand{\constructionautorefname}{Construction}
+\providecommand{\settingautorefname}{Setting}
+\providecommand{\axiomsautorefname}{Axioms}
+
+
+\newcommand\sqbr{[\;,\,]}
+\newcommand\betw{\mathbf{betw}}
+\newcommand\coll{\mathbf{coll}}
+\newcommand\Coll{\mathbf{Coll}}
+\newcommand\copl{\mathbf{copl}}
+\newcommand\Copl{\mathbf{Copl}}
+\newcommand\para{\mathbf{parallel}}
+
+
+%%% HEADER %%%
+\title[D2]{D2}
+\author{Sylvy Anscombe}
+\address{Jeremiah Horrocks Institute, University of Central Lancashire, Preston PR1 2HE, United Kingdom}
+\email{sanscombe@uclan.ac.uk}
+\thanks{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{enumeratenice}
+\item[{\bf(A1)}]
+\item[{\bf(A2)}]
+\item[{\bf(A3)}]
+\item[{\bf(A4)}]
+\item[{\bf(A5)}]
+\end{enumeratenice}
+
+
+
+
+
+\vfill
+
+
+
+
+%%% ACKNOWLEDGEMENTS %%%
+% \section*{Acknowledgements}
+
+% The author would like to extend our thanks to
+% XXXXXX
+% for numerous helpful conversations.
+% {\color{red}anyone else?}
+
+% Some of this work was completed while we were participating in the
+% {\em 
+% Model Theory, Combinatorics and Valued fields}
+% trimester at the Institut Henri Poincar\'{e},
+% and we would like to extend our thanks to the organisers.
+% Sylvy Anscombe was also partially supported by The Leverhulme Trust
+% under grant RPG-2017-179.
+
+
+% %%% BIBLIOGRAPHY %%%
+% % \def\bibfont{\footnotesize}
+% \bibliographystyle{plain}
+% % \begin{singlespacing}
+% \begin{thebibliography}{AAA00a}
+
+% % \bibitem[AJ18]{AJ18}
+% % Sylvy Anscombe and Franziska Jahnke.
+% % \newblock {\em Dreaming of NIP fields.}
+% % \newblock Manuscript, 2018.
+
+% % \bibitem[B\'{e}l99]{Bel99}
+% % Luc B\'{e}lair.
+% % \newblock {\em Types dans les corps valu\'{e}s munis d'applications coefficients.}
+% % \newblock Illinois J.~Math., 43(2):410--425, 1999.
+
+% % \bibitem[CC56]{CC56}
+% % Henri Cartan and Claude Chevalley.
+% % \newblock {\em G\'{e}om\'{e}trie Alg\'{e}brique:}
+% % \newblock S\'{e}minaire H.~Cartan et C.~Chevalley, ENS, 8e ann\'{e}e, 1955--1956.
+
+% % \bibitem[Che43]{Che43}
+% % Claude Chevalley.
+% % \newblock {\em On the theory of local rings.}
+% % \newblock {Ann.~Math.}, 44(4):690--708, 1943.
+
+% % \bibitem[Coh46]{Coh46}
+% % I.~S.~Cohen.
+% % \newblock {\em On the structure and ideal theory of complete local rings.}
+% % \newblock Trans.~Amer.~Math.~Soc., 59:54--106, 1946.
+
+% % % \bibitem[Del82]{Del82}
+% % % Fran\c{c}oise Delon.
+% % % \newblock {\em Quelques propri\'{e}t\'{e}s des corps valu\'{e}s en th\'{e}orie des mod\`{e}les.}
+% % % \newblock Th\`{e}se de Doctorat d'\'{E}tat, Universit\'{e} Paris VII, 1982.
+
+% % \bibitem[DM15]{DM15}
+% % Jamshid Derakhshan and Angus Macintyre.
+% % \newblock {\em Model completeness for henselian fields with finite ramification valued in a $\mathbb{Z}$-group}.
+% % \newblock Manuscript (??), 2015.
+
+% % \bibitem[HS34]{HS34}
+% % H.~Hasse and F.~K.~Schmidt.
+% % \newblock {\em Die Struktur diskret bewerteter K\"{o}rper.}
+% % \newblock J.~reine angew.~Math., 170:4--63, 1934.
+
+% % \bibitem[Kru37]{Kru37}
+% % Wolfgang Krull.
+% % \newblock {\em Beitr\"{a}ge zur Arithmetik kommutativer Integrit\"{a}tsberiche. III Zum Dimensionsbegriff der Idealtheorie.}
+% % \newblock {Math.~Zeit.}, 42:745-766, 1937.
+
+% % \bibitem[Kru38]{Kru38}
+% % Wolfgang Krull.
+% % \newblock {\em Dimensionstheorie in Stellenringen}.
+% % \newblock J.~reine angew.~Math., 179:204--226, 1938.
+
+% % \bibitem[Mac39a]{Mac39a}
+% % Saunders Mac Lane.
+% % \newblock {\em Modular fields. I. Separating transcendence bases.}
+% % \newblock Duke Math.~J., 5:372--393, 1939.
+
+% % \bibitem[Mac39b]{Mac39b}
+% % Saunders Mac Lane.
+% % \newblock {\em Steinitz field towers for modular fields.}
+% % \newblock Trans.~Amer.~Math.~Soc., 46:23--45, 1939.
+
+% % \bibitem[Mac39c]{Mac39c}
+% % Saunders Mac Lane.
+% % \newblock {\em Subfields and Automorphisms Groups of $p$-Adic Fields.}
+% % \newblock {Ann.~Math.}, 40(2):423--442, 1939.
+
+% % \bibitem[Mac40]{Mac40}
+% % Saunders Mac Lane.
+% % \newblock {\em Modular fields.}
+% % \newblock Amer.~Math.~Monthly, 47:259--274, 1940.
+
+% % \bibitem[PR84]{PR84}
+% % Alexander Prestel and Peter Roquette.
+% % \newblock {\em Formally $p$-adic fields.}
+% % \newblock Lecture Notes in Logic, Springer, 1984.
+
+% % \bibitem[Roq03]{Roq03}
+% % Peter Roquette.
+% % \newblock {\em History of Valuation Theory, Part I.}
+% % \newblock Available online: {\href{https://www.mathi.uni-heidelberg.de/~roquette/hist_val.pdf}{\scriptsize\tt{https://www.mathi.uni-heidelberg.de/\textasciitilde roquette/hist\textunderscore val.pdf}}}, 2003.
+
+% % \bibitem[Sch72]{Sc72}
+% % Colette Schoeller
+% % \newblock {\em Groupes affines, commutatifs, unipotents sur un corps non parfait.}
+% % \newblock {Bull.~de la S.~M.~F.}, 100:241--300, 1972.
+
+% % \bibitem[Ser79]{Ser79}
+% % Jean-Pierre Serre.
+% % \newblock {\em Local Fields} (English translation of {\em Corps locaux}).
+% % \newblock Springer, 1979.
+
+% % \bibitem[Ser00]{Ser00}
+% % Jean-Pierre Serre.
+% % \newblock {\em Local Algebra} (English translation of {\em Alg\`{e}bre Locale -- Multiplicit\'{e}s}).
+% % \newblock Springer, 2000.
+
+% % \bibitem[Tei36a]{Tei36a}
+% % Oswald Teichm\"{u}ller.
+% % \newblock {\em $p$-Algebren.}
+% % \newblock {Deutsche Math.}, 1:362--388, 1936.
+
+% % \bibitem[Tei36b]{Tei36b}
+% % Oswald Teichm\"{u}ller.
+% % \newblock {\em \"{U}ber die Struktur diskret bewerteter perfekter K\"{o}rper.}
+% % \newblock In: {\em Nachrichten von der Gesellschaft der Wissenschaften zu G\"{o}ttingen, Mathematisch-Physikalishe Klasse: Fachgruppe 1, Nachrichten aus der Mathematik}, 1(10):152--161, 1936.
+
+% % \bibitem[Tei37]{Tei37}
+% % Oswald Teichm\"{u}ller.
+% % \newblock {\em Diskret bewerteter perfekte K\"{o}rper mit unvollkommenem Restklassenk\"{o}rper.}
+% % \newblock {J.~reine angew.~Math.}, 176:141--152, 1937.
+
+% % \bibitem[vdD14]{vdD14}
+% % Lou van den Dries.
+% % \newblock {\em Lectures on the Model Theory of Valued Fields.}
+% % \newblock In Lou van den Dries, Jochen Koenigsmann, H.\ Dugald Macpherson, Anand Pillay, Carlo Toffalori, Alex J.\ Wilkie,
+% % {\em Model Theory in Algebra, Analysis and Arithmetic}, 55--157.
+% % \newblock Lecture Notes in Mathematics, vol.\ 2111.
+% % \newblock Springer, Berlin, Heidelberg, 2014.
+
+% % \bibitem[Wei84]{Wei84}
+% % Volker Weispfenning.
+% % \newblock {\em Quantifier elimination and decision procedures for valued fields.}
+% % \newblock In: M\"{u}ller G.H., Richter M.M.~(eds) {\em Models and Sets}. Lecture Notes in Mathematics, vol 1103. Springer, Berlin, Heidelberg, 1984.
+
+% % \bibitem[Wit??]{Wit??}
+% % Witt.
+% % \newblock {\em ????????????}.
+% % \newblock ????????, 19??.
+
+% \end{thebibliography}
+% % \end{singlespacing}
+\end{document}
